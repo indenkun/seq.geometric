@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-`{seq.geometric}`は等比級数列を求めるための関数を提供するパッケージです。
+`{seq.geometric}`は等比数列を求めるための関数を提供するパッケージです。
 
 ## Installation
 
@@ -37,7 +37,7 @@ remotes::install_github("indenkun/seq.geometric")
 library(seq.geometric)
 ```
 
-`from`で初項を指定し、`to`で最終項か最終項に最も近い値を指定し、`by.rate`で公比を指定することで、"初項*公比^n"の等比級数列を"from"から"to"に最も近い値まで求めることができます。
+`from`で初項を指定し、`to`で最終項か最終項に最も近い値を指定し、`by.rate`で公比を指定することで、"初項*公比^n"の等比数列を"from"から"to"に最も近い値まで求めることができます。
 
 ```{r}
 seq_geometric(from = 1, to = 128, by.ratio = 2)
