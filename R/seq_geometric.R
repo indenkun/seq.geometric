@@ -42,7 +42,7 @@ seq_geometric <- function(from, to, by.ratio, length.out = NULL){
     stop("Only positive finite numbers greater than 1 are accepted for length.out")
 
   if(!is.null(length.out)) length.out_ans <- length.out - 1
-  if(is.null(length.out)) length.out_ans <- log(abs(to), by.ratio) - log(abs(from), by.ratio)
+  if(is.null(length.out)) length.out_ans <- log(abs(to) / abs(from), by.ratio)
 
   ans <- from * by.ratio ^ (0:length.out_ans)
   if(!is.null(length.out) && abs(from) <= abs(to)) ans <- subset(ans, abs(ans) <= abs(to))
